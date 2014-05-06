@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Json Load";
+}
+<h2>
+    Json Load</h2>
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+@(Html.JqGrid()
+        .Name("fjqgrid")
+        .Url("/simpleload/jsonloadajaxpost")
+        .DataType("json")
+        .MType("GET")
+        .Columns(c =>
+                    {
+                        c.Bind("ProductID").Header("ID");
+                        c.Bind("Name").Header("Name");
+                        c.Bind("Size").Header("Size").Align(ColumnAlign.Center);
+                        c.Bind("ProductCategoryID").Header("Category");
+                        c.Bind("ListPrice").Header("List Price").Align(ColumnAlign.Center);
+                    })
+        .Pager("#pager")
+        .PgInput(false)
+        .RowNum(10)
+        .ViewRecords(true)
+        .Width("900")
+        .Height("100%")
+        .Caption("Simple Json Load")
+        
+        //.Events(e => e.LoadComplete("function(){ createPage() }"))
+        .Render())
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>
+<script type="text/javascript">
+    function createPage() {
+        var grid = $("#fjqgrid"), MAX_PAGERS = 8;
+
+        var i, myPageRefresh = function (e) {
+            var newPage = $(e.target).text();
+            grid.trigger("reloadGrid", [{ page: newPage}]);
+            e.preventDefault();
+        };
+
+        $(grid[0].p.pager + '_center td.myPager').remove();
+        var pagerPrevTD = $('<td>', { class: "myPager" }), prevPagesIncluded = 0,
+        pagerNextTD = $('<td>', { class: "myPager" }), nextPagesIncluded = 0,
+        totalStyle = grid[0].p.pginput === false,
+        startIndex = totalStyle ? this.p.page - MAX_PAGERS * 2 : this.p.page - MAX_PAGERS;
+        for (i = startIndex; i <= this.p.lastpage && (totalStyle ? (prevPagesIncluded + nextPagesIncluded < MAX_PAGERS * 2) : (nextPagesIncluded < MAX_PAGERS)); i++) {
+            if (i <= 0 || i === this.p.page) { continue; }
+
+            var link = $('<a>', { href: '#', click: myPageRefresh });
+            link.text(String(i));
+            if (i < this.p.page || totalStyle) {
+                if (prevPagesIncluded > 0) { pagerPrevTD.append('<span>,&nbsp;</span>'); }
+                pagerPrevTD.append(link);
+                prevPagesIncluded++;
+            } else {
+                if (nextPagesIncluded > 0 || (totalStyle && prevPagesIncluded > 0)) { pagerNextTD.append('<span>,&nbsp;</span>'); }
+                pagerNextTD.append(link);
+                nextPagesIncluded++;
+            }
+        }
+        if (prevPagesIncluded > 0) {
+            $(grid[0].p.pager + '_center td[id^="prev"]').after(pagerPrevTD);
+        }
+        if (nextPagesIncluded > 0) {
+            $(grid[0].p.pager + '_center td[id^="next"]').before(pagerNextTD);
+        }
+    }
+
+
+</script>

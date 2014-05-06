@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="FD6ABA44-77C3-4C49-A5AF-60B8C77BF042" ModuleId="FluentJqGrid.Mvc4.Demo" />
+  <Module PersistentId="B03E2E90-3931-4348-B506-CC48D93BC18D" ModuleId="FluentJqGrid" />
+  <Module PersistentId="5910104E-5AAC-4AC7-A627-56172993C6EC" ModuleId="AdventureWorksLT.Data" />
+  <Module PersistentId="B03E2E90-3931-4348-B506-CC48D93BC18D" ModuleId="FluentJqGrid_1" />
+</Modules>

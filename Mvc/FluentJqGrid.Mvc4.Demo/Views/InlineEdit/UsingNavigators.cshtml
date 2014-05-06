@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Using Navigators";
+}
+<h2>
+    Using Navigators</h2>
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+@(Html.JqGrid()
+    .Name("fjqgrid")
+    .Url("/inlineedit/usingnavigatorsajaxpost")
+    .DataType("json")
+    .MType("GET")
+    .Columns(c =>
+                 {
+                     c.Bind(m => m.ProductID).Header("ID");
+                     c.Bind(m => m.Name).Header("Name").Editable(true);
+                     c.Bind(m => m.Size).Header("Size").Align(ColumnAlign.Center).Editable(true).EditRules(e => e.Integer(true));
+                     c.Bind(m => m.ProductCategoryID).Header("Category").Editable(true);
+                     c.Bind(m => m.ListPrice).Header("List Price").Align(ColumnAlign.Center).Editable(true);
+                 })
+    .Pager("pager")
+    .RowNum(10)
+    .ViewRecords(true)
+    .Width("900")
+    .Height("100%")
+    .Caption("Using Navigators")
+    .EditUrl("/inlineedit/usingnavigatorsedited")
+    .Navigators(n =>n.InlineNavigator())
+    .Render()
+    )
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>

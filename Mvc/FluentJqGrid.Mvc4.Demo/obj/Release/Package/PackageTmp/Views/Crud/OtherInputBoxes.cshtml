@@ -1,0 +1,77 @@
+﻿@model FluentJqGrid.Mvc4.Demo.Models.ProductModel
+@{
+    ViewBag.Title = "CrudWithInputBoxes";
+}
+
+<h2>
+    Crud With Input Boxes</h2>
+<table id="OtherInputBoxes">
+</table>
+<div id="pager1"></div>
+<input type="button" id="button1" value="Edit" />
+<input type="button" id="button2" value="Add" />
+<input type="button" id="button3" value="Delete" />
+<input type="button" id="button4" value="View" />
+
+
+@(Html.JqGrid(Model).Name("OtherInputBoxes")
+        .Url("/Crud/OtherInputBoxesJsonData/")
+    .DataType("json")
+    .MType("GET")
+    .Columns(c =>
+            {
+                c.Bind(m => m.ProductID).Header("ID").Index("ID").Width(130)
+                    .Editable(false).EditOptions(e => e.Text().ReadOnly(true));
+                c.Bind(m => m.Name).Header("Name").Index("Name").Width(130)
+                    .Editable(true).EditOptions(e => e.Text());
+                c.Bind(m => m.Size).Header("Size").Index("Size").Width(130).Align(ColumnAlign.Center)
+                    .Editable(true).EditOptions(e => e.Text());
+                c.Bind(m => m.ProductCategoryID).Index("ProductCategoryID").Width(130).Header("Category")
+                    .Editable(true).EditOptions(e => e.Select().Value(@ViewBag.ProductCategory));
+                c.Bind(m => m.ListPrice).Header("List Price").Index("ListPrice").Width(130).Align(ColumnAlign.Center)
+                    .Editable(true).EditOptions(e => e.Text());
+            })
+    .Pager("pager1")
+    .RowNum(10)
+    .RowList(new[] { 10, 20, 30, 50 })
+    .SortName("Id")
+    .SortOrder("desc")
+    .ViewRecords(true)
+    .MultiSelect(false)
+    .Width("900")
+    .AutoWidth(false)
+    .ShrinkToFit(true)
+    .Height("100%")
+    .Caption("Sample Grid")
+    .EditUrl("/Crud/JsonSaving")
+    //.TopPager(true)
+    .Navigators(n =>
+                    
+                        //n.Edit().Top(300).Left(300).Height(500);
+                        //n.Add().Top(200).Left(200).Height(500);
+                        n.InlineNavigator(true)
+                    )
+    .FormEditing(m =>
+        {
+            m.EditGridRow("button1");
+            m.AddGridRow("button2").Top(300);
+            m.DeleteGridRow("button3").Top(300);
+            m.ViewGridRow("button4").Top(300);
+        })
+      .Render())                        
+
+@*<input type="button" id="bedata" value="Add" />*@ @*<script type="text/javascript">
+    $("#OtherInputBoxes").jqGrid('navGrid', '#pager1',
+        {}, //options
+        {height: 280, reloadAfterSubmit: false }, // edit options
+        {height: 280, reloadAfterSubmit: false }, // add options
+        {reloadAfterSubmit: false }, // del options
+        {}, // search options    
+        {} // view options
+    );
+
+//    $("#bedata").click(function () {
+//        jQuery("#OtherInputBoxes").jqGrid('editGridRow', "46", { height: 280, reloadAfterSubmit: true });
+//    });
+</script>*@
+

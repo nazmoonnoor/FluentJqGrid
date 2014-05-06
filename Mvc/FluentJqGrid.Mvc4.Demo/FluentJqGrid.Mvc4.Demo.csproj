@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentJqGrid.Mvc4.Demo</RootNamespace>
+    <AssemblyName>FluentJqGrid.Mvc4.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\..\packages\Glimpse.0.87\lib\net40\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Ef">
+      <HintPath>..\..\packages\Glimpse.Ef.0.87\lib\net40\Glimpse.Ef.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc3">
+      <HintPath>..\..\packages\Glimpse.Mvc3.0.87\lib\net40\Glimpse.Mvc3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleInjector">
+      <HintPath>..\..\packages\SimpleInjector.1.5.0.12199\lib\net35\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Extensions, Version=1.5.0.12238, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SimpleInjector.Extensions.1.5.0.12238\lib\net35\SimpleInjector.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.1.5.0.12199\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc">
+      <HintPath>..\..\packages\SimpleInjector.MVC3.1.5.0.12199\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\WebActivator.1.5.1\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
+    <Compile Include="Common\MenuItems.cs" />
+    <Compile Include="Common\SrcSamples.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CrudController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InlineEditController.cs" />
+    <Compile Include="Controllers\LoadingController.cs" />
+    <Compile Include="Controllers\SearchingController.cs" />
+    <Compile Include="Controllers\SimpleLoadController.cs" />
+    <Compile Include="Controllers\XmlResult.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Elmah\ErrorHandlingActionInvoker.cs" />
+    <Compile Include="Infrastructure\Elmah\ErrorHandlingControllerFactory.cs" />
+    <Compile Include="Infrastructure\Elmah\HandleErrorWithELMAHAttribute.cs" />
+    <Compile Include="Infrastructure\Extensions.cs" />
+    <Compile Include="Infrastructure\SimpleInjector\RegisterServices.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\CustomerViewModels.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\SimpleVerticalMenuModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleSources\SimpleLoad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimpleLoad.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="App_Readme\glimpse.ef.readme.txt" />
+    <Content Include="App_Readme\glimpse.mvc3.readme.txt" />
+    <Content Include="App_Readme\glimpse.readme.txt" />
+    <Content Include="Content\images\body-bg.jpg" />
+    <Content Include="Content\images\footer-bg.jpg" />
+    <Content Include="Content\images\menu-bg.jpg" />
+    <Content Include="Content\images\top-header-bg.jpg" />
+    <Content Include="Content\menu\simpleverticalmenu.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\SyntaxHighlighter\shCore.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreDjango.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreEclipse.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreEmacs.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreFadeToGrey.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreMDUltra.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreMidnight.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreRDark.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeDefault.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeDjango.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeEclipse.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeEmacs.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeFadeToGrey.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeMDUltra.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeMidnight.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\jqgradientca\gradient-97.png" />
+    <Content Include="Content\themes\jqgradientca\gradientca.css" />
+    <Content Include="Content\themes\jqgradientca\gradient-ca.png" />
+    <Content Include="Content\themes\jqgradientca\gradient-ee.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\appharbor.com.pubxml" />
+    <None Include="Properties\PublishProfiles\FluentJqGrid.pubxml" />
+    <None Include="Scripts\jquery-1.8.0.intellisense.js">
+      <DependentUpon>jquery-1.8.0.js</DependentUpon>
+    </None>
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js">
+      <DependentUpon>jquery-1.8.0.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js">
+      <DependentUpon>jquery-ui-1.8.11.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\css\ellipsis-xbl.xml" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\css\ui.jqgrid.css" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\Changes.txt" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-hr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-hr1250.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-kr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-tw.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\install.txt" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\js\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\grid.addons.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\grid.postext.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\grid.setcolumns.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\jquery.contextmenu.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\jquery.searchFilter.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\jquery.tablednd.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\searchFilter.css" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\ui.multiselect.css" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\plugins\ui.multiselect.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\css\ellipsis-xbl.xml" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\css\ui.jqgrid.css" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\css\ui.multiselect.css" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.base.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.celledit.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.common.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.custom.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.filter.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.formedit.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.grouping.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.import.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.inlinedit.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.jqueryui.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.loader.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.subgrid.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.tbltogrid.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\grid.treegrid.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-hr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-hr1250.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-kr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-tw.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\jqDnR.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\jqModal.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\jquery.fmatter.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1\src\JsonXml.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js">
+      <DependentUpon>jquery.unobtrusive-ajax.js</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
+      <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\organictabs.jquery.js" />
+    <Content Include="Scripts\menu\simpleverticalmenu.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shAutoloader.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushAppleScript.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushAS3.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushBash.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushColdFusion.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushCpp.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushCSharp.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushCss.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushDelphi.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushDiff.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushErlang.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushGroovy.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushJava.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushJavaFX.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushJScript.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushPerl.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushPhp.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushPlain.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushPowerShell.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushPython.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushRuby.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushSass.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushScala.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushSql.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushVb.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shBrushXml.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shCore.js" />
+    <Content Include="Scripts\SyntaxHighlighter\shLegacy.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\aspNetHome.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\findHosting.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\NuGetGallery.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\windowsLive.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_AppLayout.cshtml" />
+    <Content Include="Views\Shared\_OneColumn.cshtml" />
+    <Content Include="Views\Shared\_SrcSamples.cshtml" />
+    <Content Include="Views\Shared\_TwoColumn.cshtml" />
+    <Content Include="Views\Loading\Index.cshtml" />
+    <Content Include="Views\Loading\TestPage.cshtml" />
+    <Content Include="Views\Crud\Index.cshtml" />
+    <Content Include="Views\Crud\OtherInputBoxes.cshtml" />
+    <Content Include="Views\SimpleLoad\ColumnSettingLoad.cshtml" />
+    <Content Include="Views\SimpleLoad\JsonLoad.cshtml" />
+    <Content Include="Views\SimpleLoad\StronglyTypedColumns.cshtml" />
+    <Content Include="Views\SimpleLoad\XmlLoad.cshtml" />
+    <Content Include="Views\SimpleLoad\LoadOnce.cshtml" />
+    <Content Include="Views\InlineEdit\UsingCustomButtons.cshtml" />
+    <Content Include="Views\InlineEdit\UsingNavigators.cshtml" />
+    <Content Include="Views\Shared\SimpleVerticalMenu.cshtml" />
+    <Content Include="Views\Searching\ToolbarSearching.cshtml" />
+    <Content Include="Views\Searching\CustomSearching.cshtml" />
+    <Content Include="Views\Searching\SingleColumnSearching.cshtml" />
+    <Content Include="Views\Searching\AdvancedSearching.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\Ninject\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Api\FluentJqGrid\FluentJqGrid.csproj">
+      <Project>{b03e2e90-3931-4348-b506-cc48d93bc18d}</Project>
+      <Name>FluentJqGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdventureWorksLT.Data\AdventureWorksLT.Data.csproj">
+      <Project>{5910104e-5aac-4ac7-a627-56172993c6ec}</Project>
+      <Name>AdventureWorksLT.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SampleSources\SimpleLoad.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SimpleLoad.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3912/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

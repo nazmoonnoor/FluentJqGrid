@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Xml Load";
+}
+<h2>
+    XmlLoad</h2>
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+@(Html.JqGrid()
+    .Name("fjqgrid")
+    .Url("/simpleload/xmlloadajaxpost")
+    .DataType("xml")
+    .MType("GET")
+    .Columns(c =>
+                 {
+                     c.Bind("ProductID").Header("ID");
+                     c.Bind("Name").Header("Name");
+                     c.Bind("Size").Header("Size").Align(ColumnAlign.Center);
+                     c.Bind("ProductCategoryID").Header("Category");
+                     c.Bind("ListPrice").Header("List Price").Align(ColumnAlign.Center);
+                 })
+    .Pager("#pager")
+    .PgInput(false)
+    .RowNum(10)
+    .ViewRecords(true)
+    .Width("900")
+    .AutoWidth(false)
+    .ShrinkToFit(true)
+    .Height("100%")
+    .Caption("Simple Xml Load")
+    .Render()
+    )
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B03E2E90-3931-4348-B506-CC48D93BC18D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentJqGrid</RootNamespace>
+    <AssemblyName>FluentJqGrid</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Form\ColumnFormOptions.cs" />
+    <Compile Include="Core\InlineEditingOptions.cs" />
+    <Compile Include="Core\Search\FilterToolbarOptions.cs" />
+    <Compile Include="Core\Search\ColumnSearchRules.cs" />
+    <Compile Include="Core\Search\SearchGridOptions.cs" />
+    <Compile Include="Infrastructure\Search\FilterToolbar.cs" />
+    <Compile Include="Infrastructure\Search\IFilterToolbar.cs" />
+    <Compile Include="Extensions\Utils.cs" />
+    <Compile Include="GridData.cs" />
+    <Compile Include="Infrastructure\GridInlineEditing.cs" />
+    <Compile Include="Infrastructure\IGridInlineEditing.cs" />
+    <Compile Include="Infrastructure\Search\ISearchGrid.cs" />
+    <Compile Include="Infrastructure\Search\ISearchRules.cs" />
+    <Compile Include="Infrastructure\Search\SearchGrid.cs" />
+    <Compile Include="Infrastructure\Search\SearchRules.cs" />
+    <Compile Include="Settings\EditRulesSettings.cs" />
+    <Compile Include="Settings\EditSettings.cs" />
+    <Compile Include="Settings\FormOptionSettings.cs" />
+    <Compile Include="Settings\JqGridColumnSettings.cs" />
+    <Compile Include="Experiments\rows.cs" />
+    <Compile Include="Infrastructure\Edit\ColumnEdit.cs" />
+    <Compile Include="Infrastructure\Edit\EditButton.cs" />
+    <Compile Include="Infrastructure\Edit\EditCheck.cs" />
+    <Compile Include="Infrastructure\Edit\EditImage.cs" />
+    <Compile Include="Infrastructure\Edit\EditPassword.cs" />
+    <Compile Include="Infrastructure\Edit\EditRules.cs" />
+    <Compile Include="Infrastructure\Edit\EditSelect.cs" />
+    <Compile Include="Infrastructure\Edit\EditText.cs" />
+    <Compile Include="Infrastructure\Edit\EditTextArea.cs" />
+    <Compile Include="Infrastructure\Edit\IColumnEdit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditCheck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditCustom.cs" />
+    <Compile Include="Infrastructure\Edit\IEditFile.cs" />
+    <Compile Include="Infrastructure\Edit\IEditImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditRules.cs" />
+    <Compile Include="Infrastructure\Edit\IEditSelect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditTextArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Edit\IEditText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Formatter\IFormatInteger.cs" />
+    <Compile Include="Infrastructure\Formatter\IFormatNumber.cs" />
+    <Compile Include="Infrastructure\Formatter\IFormatShowLink.cs" />
+    <Compile Include="Infrastructure\Formatter\IFormatter.cs" />
+    <Compile Include="Infrastructure\Form\ColumnForm.cs" />
+    <Compile Include="Infrastructure\Form\FormDeleteBuilder.cs" />
+    <Compile Include="Infrastructure\Form\FormEditBuilder.cs" />
+    <Compile Include="Infrastructure\Form\FormViewBuilder.cs" />
+    <Compile Include="Infrastructure\Form\IColumnForm.cs" />
+    <Compile Include="Infrastructure\GridEvents.cs" />
+    <Compile Include="Infrastructure\GridFormEditing.cs" />
+    <Compile Include="Infrastructure\GridNavigator.cs" />
+    <Compile Include="Infrastructure\IGridColumnBinder.cs" />
+    <Compile Include="Infrastructure\IGridEvents.cs" />
+    <Compile Include="Infrastructure\IGridFormEditing.cs" />
+    <Compile Include="Infrastructure\IGridNavigator.cs" />
+    <Compile Include="Infrastructure\Search\ISearchOptions.cs" />
+    <Compile Include="Infrastructure\Search\SearchOptions.cs" />
+    <Compile Include="Core\Edit\ColumnEditOptions.cs" />
+    <Compile Include="Core\Edit\ColumnEditRules.cs" />
+    <Compile Include="Core\Form\FormDeleteOptions.cs" />
+    <Compile Include="Core\Form\FormEditOptions.cs" />
+    <Compile Include="Core\Form\FormViewOptions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Infrastructure\GridBuilder.cs" />
+    <Compile Include="Infrastructure\GridColumnBuilder.cs" />
+    <Compile Include="Infrastructure\Form\IFormDeleteBuilder.cs" />
+    <Compile Include="Infrastructure\Form\IFormEditBuilder.cs" />
+    <Compile Include="Infrastructure\Form\IFormViewBuilder.cs" />
+    <Compile Include="Infrastructure\IGridBuilder.cs" />
+    <Compile Include="Infrastructure\IGridColumnBuilder.cs" />
+    <Compile Include="Infrastructure\IHideObjectMembers.cs" />
+    <Compile Include="Core\Events.cs" />
+    <Compile Include="Core\GridOptions.cs" />
+    <Compile Include="Core\GridColumnOptions.cs" />
+    <Compile Include="JqGridModel.cs" />
+    <Compile Include="JqGridData.cs" />
+    <Compile Include="JqGridEnum.cs" />
+    <Compile Include="JqGridHelper.cs" />
+    <Compile Include="Attributes\JqGridColumnAttribute.cs" />
+    <Compile Include="Attributes\JqGridColumnEditAttribute.cs" />
+    <Compile Include="JqGridPost.cs" />
+    <Compile Include="Core\FormEditingOptions.cs" />
+    <Compile Include="Core\NavigatorOptions.cs" />
+    <Compile Include="Core\Search\ColumnSearchOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Experiments\SerializeToXml.cs" />
+    <Compile Include="ToScript\Search\FilterToolbarToScript.cs" />
+    <Compile Include="ToScript\Search\ColumnSearchOptionsToScript.cs" />
+    <Compile Include="ToScript\Form\ColumnFormOptionsToScript.cs" />
+    <Compile Include="ToScript\Edit\ColumnEditRulesToScript.cs" />
+    <Compile Include="ToScript\Edit\ColumnEditToScript.cs" />
+    <Compile Include="ToScript\EventsToScript.cs" />
+    <Compile Include="ToScript\Form\FormDeleteToScript.cs" />
+    <Compile Include="ToScript\Form\FormEditToScript.cs" />
+    <Compile Include="ToScript\Form\FormViewToScript.cs" />
+    <Compile Include="ToScript\ColumnToScript.cs" />
+    <Compile Include="Infrastructure\IToScript.cs" />
+    <Compile Include="ToScript\FormEditingToScript.cs" />
+    <Compile Include="ToScript\InlineEditingToScript.cs" />
+    <Compile Include="ToScript\Search\ColumnSearchRulesToScript.cs" />
+    <Compile Include="ToScript\Search\SearchGridToScript.cs" />
+    <Compile Include="ToScript\ToScriptManager.cs" />
+    <Compile Include="ToScript\NavigatorToScript.cs" />
+    <Compile Include="ToScript\ToScriptBase.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="remaining-features.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

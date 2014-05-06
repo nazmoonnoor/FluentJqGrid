@@ -1,0 +1,8 @@
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\bin\Release\AdventureWorksLT.Data.dll.config
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\bin\Release\AdventureWorksLT.Data.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\bin\Release\AdventureWorksLT.Data.pdb
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\bin\Release\EntityFramework.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\bin\Release\EntityFramework.xml
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\obj\Release\AdventureWorksLT.Data.csprojResolveAssemblyReference.cache
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\obj\Release\AdventureWorksLT.Data.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Mvc\AdventureWorksLT.Data\obj\Release\AdventureWorksLT.Data.pdb

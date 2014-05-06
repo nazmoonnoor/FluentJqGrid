@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Column Setting Load";
+}
+@{
+    var jqGridColumnSettiongs = (IEnumerable<FluentJqGrid.Settings.JqGridColumnSettings>) ViewData["ProductColumns"];
+}
+<h2>
+    Column Setting Load</h2>
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+@(Html.JqGrid()
+        .Name("fjqgrid")
+        .Url("/simpleload/columnsettingloadajaxpost")
+        .DataType("json")
+        .MType("GET")
+        .Columns(c => c.LoadJqGridColumnSettings(jqGridColumnSettiongs))
+        .Pager("#pager")
+        .PgInput(false)
+        .RowNum(10)
+        .ViewRecords(true)
+        .Width("900")
+        .AutoWidth(false)
+        .ShrinkToFit(true)
+        .Height("100%")
+        .Caption("Load by Column Settings")
+        .Render())
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>

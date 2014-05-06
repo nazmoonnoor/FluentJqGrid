@@ -1,0 +1,39 @@
+﻿@model FluentJqGrid.Mvc4.Demo.Models.ProductModel
+
+@{
+    ViewBag.Title = "Toolbar Searching";
+}
+
+<h2>Toolbar Searching</h2>
+
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+@(Html.JqGrid()
+    .Name("fjqgrid")
+    .Url("/searching/toolbarsearchingajaxpost")
+    .DataType("json")
+    .MType("GET")
+    .Columns(c =>
+                 {
+                     c.Bind(m => m.ProductID).Header("ID");
+                     c.Bind(m => m.Name).Header("Name");
+                     c.Bind(m => m.Size).Header("Size").Align(ColumnAlign.Center);
+                     c.Bind(m => m.ProductCategoryID).Header("Category");
+                     c.Bind(m => m.ListPrice).Header("List Price").Align(ColumnAlign.Center);
+                 })
+    .Pager("pager")
+    .RowNum(10)
+    .ViewRecords(true)
+    .Width("900")
+    .Height("100%")
+    .LoadOnce(true)
+    .Caption("Using Navigators")
+    .FilterToolbar(c=>c.StringResult(true).SearchOnEnter(false))
+    .Render()
+  )
+
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>

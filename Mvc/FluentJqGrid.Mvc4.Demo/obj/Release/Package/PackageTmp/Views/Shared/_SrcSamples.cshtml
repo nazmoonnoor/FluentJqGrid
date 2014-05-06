@@ -1,0 +1,41 @@
+﻿@model FluentJqGrid.Mvc4.Demo.Common.SrcSamples
+@using FluentJqGrid.Mvc4.Demo.Common
+@{
+    var sources = @ViewData["src"] as SrcSamples;
+    string controllerSrc = (sources != null) ? sources.ControllerSrc : string.Empty;
+    string viewSrc = (sources != null) ? sources.ViewSrc : string.Empty;
+    string description = (sources != null) ? sources.Description : string.Empty;
+}
+<script type='text/javascript'>
+    $(function () {
+        $("#src-container").organicTabs({
+            "speed": 200
+        });
+    });
+</script>
+<h2>Sample Sources</h2>
+<div id="src-container">
+    <ul class="nav">
+        <li class="nav-one"><a href="#view" class="current">View</a></li>
+        <li class="nav-two"><a href="#controller">Controller</a></li>
+        <li class="nav-three"><a href="#description">Description</a></li>
+    </ul>
+    <div class="list-wrap">
+        <ul id="view">
+            <li>
+                <pre class="brush: csharp">@(viewSrc)</pre>
+            </li>
+        </ul>
+        <ul id="controller" class="hide">
+            <li>
+                <pre class="brush: csharp">@(controllerSrc)</pre>
+            </li>
+        </ul>
+        <ul id="description" class="hide">
+            <li>
+                <pre class="brush: csharp">@(description)</pre>
+            </li>
+        </ul>
+    </div>
+</div>
+

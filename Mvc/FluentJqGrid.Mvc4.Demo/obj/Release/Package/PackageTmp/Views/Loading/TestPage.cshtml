@@ -1,0 +1,145 @@
+﻿@{
+	ViewBag.Title = "TestPage";
+}
+<h2>
+	TestPage</h2>
+<table id='list' class="scroll" cellpadding="0" cellspacing="0">
+</table>
+<div id="pager" class="scroll" style="text-align: center;">
+</div>
+<input type="BUTTON" id="ed1" value="Edit row 16" />
+<input type="BUTTON" id="sved1" disabled='true' value="Save row 16" />
+<input type="BUTTON" id="cned1" disabled='true' value="Cancel Save" />
+<script type="text/javascript">
+	var lastsel2 = -1;
+	jQuery("#list").jqGrid({
+	    url: '/Loading/JsonLoading/',
+	    datatype: 'json',
+	    mtype: 'GET',
+	    colNames: ['CustomerID', 'FirstName', 'LastName', 'EmailAddress', 'Phone'],
+	    colModel: [
+				{ name: 'CustomerID', index: 'CustomerID', width: 100, editable: false, editoptions: { readonly: true, size: 20} },
+				{ name: 'FirstName', index: 'FirstName', width: 200, editable: true, editoptions: { size: 20} },
+				{ name: 'LastName', index: 'LastName', width: 200, editable: true, editoptions: { size: 35} },
+				{ name: 'EmailAddress', index: 'EmailAddress', width: 200, align: 'center', editable: true, editoptions: { size: 20} },
+				{ name: 'Phone', index: 'Phone', width: 200, align: "right", editable: true, editoptions: { size: 20} }
+			],
+	    pager: jQuery('#pager'),
+	    rowNum: 10,
+	    rowList: [5, 10, 20, 50],
+	    sortname: 'Id',
+	    sortorder: "desc",
+//	    onSelectRow: function (id) {
+//	        if (id && id !== lastsel2) {
+//	            jQuery('#list').jqGrid('restoreRow', lastsel2);
+//	            jQuery('#list').jqGrid('editRow', id, true);
+//	            lastsel2 = id;
+//	        }
+//	    },
+	    editurl: "/Loading/JsonSaving",
+	    viewrecords: true,
+	    //multiselect: true,
+	    caption: 'grid'
+	});
+	jQuery("#list").jqGrid('navGrid', "#pager", { edit: false, add: false, del: false });
+	jQuery("#list").jqGrid('inlineNav', "#pager");
+//	jQuery("#list").jqGrid('navGrid', "#pager",
+//	//enabling buttons
+//	  {add: true, del: true, edit: true, search: true },
+//	//edit options
+//	  {url: '/Home/DeleteProduct/' },
+//	//add options
+//	  {url: '/Home/DeleteProduct/' },
+//	//delete options
+//	  {url: '/Home/DeleteProduct/' });
+
+jQuery("#ed1").click(function () {
+	jQuery("#list").jqGrid('editRow', "16");
+	this.disabled = 'true';
+	jQuery("#sved1,#cned1").attr("disabled", false);
+});
+jQuery("#sved1").click(function () {
+	jQuery("#list").jqGrid('saveRow', "16");
+	jQuery("#sved1,#cned1").attr("disabled", true);
+	jQuery("#ed1").attr("disabled", false);
+});
+jQuery("#cned1").click(function () {
+	jQuery("#list").jqGrid('restoreRow', "16");
+	jQuery("#sved1,#cned1").attr("disabled", true);
+	jQuery("#ed1").attr("disabled", false);
+});
+</script>
+<br />
+<br />
+<br />
+<br />
+<table id="editgrid">
+</table>
+<div id="pagered">
+</div>
+<input type="BUTTON" id="bedata" value="Edit Selected" />
+<script type="text/javascript">
+
+	jQuery("#editgrid").jqGrid({
+		url: '/Loading/JsonLoading/',
+		datatype: "json",
+		colNames: ['CustomerID', 'FirstName', 'LastName', 'EmailAddress', 'Phone'],
+		colModel: [
+		{ name: 'CustomerID', index: 'CustomerID', width: 100, editable: false, editoptions: { readonly: true, size: 20} },
+		{ name: 'FirstName', index: 'FirstName', width: 200, editable: true, editoptions: { size: 20} },
+		{ name: 'LastName', index: 'LastName', width: 200, editable: true, editoptions: { size: 35} },
+		{ name: 'EmailAddress', index: 'EmailAddress', width: 200, align: "right", editable: true, editoptions: { size: 20} },
+		{ name: 'Phone', index: 'Phone', width: 200, align: "right", editable: true, editoptions: { size: 20} }
+	],
+		rowNum: 10,
+		rowList: [10, 20, 30],
+		pager: '#pagered',
+		sortname: 'id',
+		viewrecords: true,
+		sortorder: "desc",
+		caption: "Search Example",
+		editurl: "/Loading/JsonSaving"
+	});
+
+
+</script>
+<script type="text/javascript">
+	$("#editgrid").navGrid(
+		"#pagered",
+		{
+			search: false,
+			edit: true,
+			add: true,
+			del: true
+		},
+		{
+			// Edit options:
+			savekey: [true, 13],
+			closeOnEscape: true,
+			closeAfterEdit: true,
+			url: '/Home/About/'
+		},
+		{
+			// Create options:
+			savekey: [true, 13],
+			closeOnEscape: true,
+			closeAfterAdd: true
+		}
+	);
+</script>
+<script type="text/javascript">
+//	//$("#bedata").click(function(){
+//	//	jQuery("#editgrid").jqGrid('editGridRow',"21",{height:280,reloadAfterSubmit:true});
+//	//});
+//	jQuery("#editgrid").jqGrid('navGrid', "#pagered",
+//	//enabling buttons
+//	  {edit: true, add: true, del: true, search: true },
+//	//edit options
+//	  {url: '/Home/DeleteProduct/' },
+//	//add options
+//	  {url: '/Home/DeleteProduct/' },
+//	//delete options
+//	  {url: '/Home/DeleteProduct/' },
+//	  {}
+//);
+</script>

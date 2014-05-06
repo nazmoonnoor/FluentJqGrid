@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{03555FF5-9158-4BF2-A20B-B8C38835D9BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mvc", "Mvc", "{05632124-B28E-4CD7-92D0-332DB329F45B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentJqGrid.Mvc4.Demo", "Mvc\FluentJqGrid.Mvc4.Demo\FluentJqGrid.Mvc4.Demo.csproj", "{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT.Data", "Mvc\AdventureWorksLT.Data\AdventureWorksLT.Data.csproj", "{5910104E-5AAC-4AC7-A627-56172993C6EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentJqGrid", "Api\FluentJqGrid\FluentJqGrid.csproj", "{B03E2E90-3931-4348-B506-CC48D93BC18D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5910104E-5AAC-4AC7-A627-56172993C6EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5910104E-5AAC-4AC7-A627-56172993C6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5910104E-5AAC-4AC7-A627-56172993C6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5910104E-5AAC-4AC7-A627-56172993C6EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03E2E90-3931-4348-B506-CC48D93BC18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03E2E90-3931-4348-B506-CC48D93BC18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03E2E90-3931-4348-B506-CC48D93BC18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03E2E90-3931-4348-B506-CC48D93BC18D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B03E2E90-3931-4348-B506-CC48D93BC18D} = {03555FF5-9158-4BF2-A20B-B8C38835D9BA}
+		{FD6ABA44-77C3-4C49-A5AF-60B8C77BF042} = {05632124-B28E-4CD7-92D0-332DB329F45B}
+		{5910104E-5AAC-4AC7-A627-56172993C6EC} = {05632124-B28E-4CD7-92D0-332DB329F45B}
+	EndGlobalSection
+EndGlobal

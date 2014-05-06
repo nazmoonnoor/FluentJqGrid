@@ -1,0 +1,35 @@
+﻿- Methods
+- Custom Buttons (Navigator)
+- Formatter
+	Predefined Formatter
+	Custom Formatter
+- Inline Editing
+- Subgrids
+	Subgrid
+	Subgrid as grid
+- Tree Grid
+	Configuration
+	Nested Set Model
+	Adjacency Model
+- Frozen Columns
+	Configuration
+*Grouping
+- Data grouping
+	Options and Configuration
+	Grouping Example
+- Header grouping
+	Options and Configuration
+	Grouping Example
+- Importing and Exporting
+	Methods
+
+
+
+
+****Important****
+- How to test FluentJqGrid
+- How to change UI (css)
+
+
+Lib.Web.Mvc
+- XmlActionResult

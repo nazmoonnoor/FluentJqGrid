@@ -1,0 +1,36 @@
+﻿@model FluentJqGrid.Mvc4.Demo.Models.ProductModel
+@{
+    ViewBag.Title = "Strongly Typed Columns";
+}
+
+<h2>Strongly Typed Columns</h2>
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+@(Html.JqGrid(Model)
+    .Name("fjqgrid")
+    .Url("/simpleload/stronglytypedcolumnsajaxpost")
+    .DataType("json")
+    .MType("GET")
+    .Columns(c =>
+                 {
+                     c.Bind(m=>m.ProductID).Header("ID");
+                     c.Bind(m => m.Name).Header("Name");
+                     c.Bind(m => m.Size).Header("Size").Align(ColumnAlign.Center);
+                     c.Bind(m => m.ProductCategoryID).Header("Category");
+                     c.Bind(m=>m.ListPrice).Header("List Price").Align(ColumnAlign.Center);
+                 })
+    .Pager("pager")
+    .RowNum(10)
+    .ViewRecords(true)
+    .Width("900")
+    .AutoWidth(false)
+    .ShrinkToFit(true)
+    .Height("100%")
+    .Caption("Strongly Typed Columns")
+    .Render()
+    )
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>

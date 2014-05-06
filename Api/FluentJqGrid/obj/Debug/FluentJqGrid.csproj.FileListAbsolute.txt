@@ -1,0 +1,25 @@
+E:\all_websuite\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.dll
+E:\all_websuite\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.pdb
+E:\all_websuite\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.dll
+E:\all_websuite\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.pdb
+E:\all_websuite\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.csprojResolveAssemblyReference.cache
+E:\all_suites\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.dll
+E:\all_suites\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.pdb
+E:\all_suites\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.csprojResolveAssemblyReference.cache
+E:\all_suites\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.dll
+E:\all_suites\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.pdb
+E:\asp.net-folder\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.dll
+E:\asp.net-folder\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.pdb
+E:\asp.net-folder\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.csprojResolveAssemblyReference.cache
+E:\asp.net-folder\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.dll
+E:\asp.net-folder\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.pdb
+E:\asp.net\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.dll
+E:\asp.net\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.pdb
+E:\asp.net\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.csprojResolveAssemblyReference.cache
+E:\asp.net\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.dll
+E:\asp.net\GitHub\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.pdb
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Debug\FluentJqGrid.pdb
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.csprojResolveAssemblyReference.cache
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Debug\FluentJqGrid.pdb

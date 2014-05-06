@@ -1,0 +1,5 @@
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Release\FluentJqGrid.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\bin\Release\FluentJqGrid.pdb
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Release\FluentJqGrid.csprojResolveAssemblyReference.cache
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Release\FluentJqGrid.dll
+E:\Workspace\asp.net\Open Source\FluentJqGrid\FluentJqGrid\src\Api\FluentJqGrid\obj\Release\FluentJqGrid.pdb

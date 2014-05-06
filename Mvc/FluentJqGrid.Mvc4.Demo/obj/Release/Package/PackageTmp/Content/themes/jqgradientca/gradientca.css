@@ -1,0 +1,168 @@
+/*grid-gradient for header/*/
+.ui-widget-header, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default 
+{
+    background-image: url('gradient-ca.png');
+    color: #333333;
+    border: 1px solid #888888;
+}
+
+.ui-pager-control
+{
+    background: #E2E2E2;
+    /*background: url("../base/images/ui-bg_flat_75_ebebeb_40x100.png") repeat-x scroll 50% 50% #EBEBEB;*/
+}
+/*header: no border for last right 
+.ui-jqgrid-labels th:last-of-type
+{
+    border:0 none;
+}
+*/
+.ui-widget-header
+{
+    font-weight: bold;
+}
+
+/*rows: table row/ altrow color*/
+.ui-jqgrid tr.jqgrow:nth-child(odd)
+{
+    background-color: #F7F7F7;
+}
+.ui-jqgrid tr.jqgrow:nth-child(even)
+{
+    background-color: #ffffff;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
+{
+    background: url('gradient-97.png');
+    color: #444444;
+
+    /*
+    border: 1px solid #CCCCCC;
+    */
+}
+
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div
+{
+    /*background: url('gradient-ca.png');*/
+    background:  url("../base/images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #EBEBEB;
+    padding: 3px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #CFCFCF;
+}
+
+.HeaderButton:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
+/*row highlight/hover*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight
+{
+    border: 1px solid #444444;
+    background: #EEEEEE url('gradient-ee.png') 50% bottom repeat-x; 
+    color: #444444;
+}
+
+/*rows: border for cell-right */
+.ui-jqgrid tr.ui-row-ltr td
+{
+    border-right: 1px solid #888888;
+}
+
+/*rows: no border for last right */
+.ui-jqgrid tr.ui-row-ltr td:last-of-type
+{
+    border: 0 none;
+}
+
+/*rows: border for row-bottom */
+.ui-jqgrid tr.jqgrow td
+{
+    border-bottom: 0 none;
+}
+
+.ui-widget
+{
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 11px;
+}
+
+.ui-jqgrid .ui-jqgrid-title
+{
+    float: left;
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+}
+
+/*remove rounded-corners*/
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl, .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr, .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br
+{
+    border-radius: 0;
+}
+
+/*manage the content rows*/
+.ui-widget-content
+{
+    background: none;
+    border: 1px solid #888888;
+    color: #444444;
+}
+
+.ui-jqdialog{
+    background-color: #F3F3F3; 
+}
+
+/*pager, pg-button*/
+.ui-jqgrid .ui-jqgrid-pager
+{
+    height: 28px;
+}
+.ui-pg-button:hover
+{
+    background: transparent; 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div span.ui-icon 
+{
+    margin: 0 1px;
+}
+
+/*override the icons*/
+.ui-state-default .ui-icon
+{
+    background-image: url('../base/images/ui-icons_222222_256x240.png');
+}
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon
+{
+    /*background-image: url(../base/images/ui-icons_222222_256x240.png);*/
+}
+
+.ui-helper-clearfix:after {
+    height: 5px;
+}
+
+.ui-jqgrid .loading {
+    border: 1px solid #CACACA;
+    background: #EEEEEE url('gradient-ee.png') 50% bottom repeat-x; 
+    color: #444444;
+}
+
+.ui-jqgrid-bdiv input[type="text"], 
+.ui-jqgrid-bdiv input[type="password"], 
+.ui-jqgrid-bdiv select  {
+    border: 1px solid #D3D3D3;
+    padding: 6px 0 6px 3px;
+}
+
+.ui-jqgrid-pager input[type="text"],
+.ui-jqgrid-pager select  {
+    border: 1px solid #D3D3D3;
+    padding: 2px 0 2px 2px;
+}

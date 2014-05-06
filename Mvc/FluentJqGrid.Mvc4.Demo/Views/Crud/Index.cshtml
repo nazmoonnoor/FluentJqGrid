@@ -1,0 +1,42 @@
+﻿@model FluentJqGrid.Mvc4.Demo.Models.CustomerModel
+@{
+    ViewBag.Title = "Crud Sample";
+}
+<h2>
+    Simple Crud</h2>
+    
+<table id="SimpleCrud"></table>
+<div id="pager1"></div>
+
+@(Html.JqGrid(Model).Name("SimpleCrud")
+    .Url("/Crud/SimpleCrudJsonData/")
+    .DataType("json")
+    .MType("GET")
+    .Columns(c =>
+                    {
+                        c.Bind(m => m.CustomerID).Editable(false);
+                        c.Bind(m => m.FirstName).Editable(true);
+                        c.Bind(m => m.LastName).Editable(true);
+                        c.Bind(m => m.EmailAddress).Editable(true);
+                        c.Bind(m => m.Phone).Editable(true);
+                    })
+    .Pager("pager1")
+    .RowNum(20)
+    .RowList(new[] { 10, 20, 30, 50 })
+    .SortName("Id")
+    .SortOrder("desc")
+    .ViewRecords(true)
+    .MultiSelect(false)
+    .Width("1100")
+    .Height("100%")
+    .Caption("grid")
+    .EditUrl("/Crud/JsonSaving")
+    .Render())
+
+<input type="button" id="bedata" value="Add" />
+<script type="text/javascript">
+    $("#bedata").click(function () {
+        jQuery("#SimpleCrud").jqGrid('editGridRow', "46", { height: 280, reloadAfterSubmit: true });
+    });
+</script>
+

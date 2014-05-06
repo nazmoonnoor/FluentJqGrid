@@ -1,0 +1,30 @@
+﻿@model FluentJqGrid.Demo.Models.CustomerViewModel
+@{
+    ViewBag.Title = "Loading";
+}
+<h2>
+    Loading</h2>
+@(Html.JqGrid(null).Name("List1")
+            .Url("/Loading/JsonLoading/")
+            .DataType("json")
+            .MType("GET")
+            .Columns(c =>
+                {
+                    c.Bind("CustomerID");
+                    c.Bind("FirstName");
+                    c.Bind("LastName");
+                    c.Bind("EmailAddress");
+                    c.Bind("Phone");
+                })
+            .Pager("pager1")
+            .RowNum(30)
+            .RowList(new[] { 10, 20, 30, 50 })
+            .SortName("Id")
+            .SortOrder("desc")
+            .ViewRecords(true)
+            .MultiSelect(true)
+            .Width("1000")
+            .Height("100%")
+            .Caption("grid")
+            .Render())
+

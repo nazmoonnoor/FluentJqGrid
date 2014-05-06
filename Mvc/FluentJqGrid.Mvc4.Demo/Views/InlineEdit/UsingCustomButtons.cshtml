@@ -1,0 +1,72 @@
+﻿@model FluentJqGrid.Mvc4.Demo.Models.ProductModel
+@{
+    ViewBag.Title = "Inline Editing Using Custom Buttons";
+}
+
+<h2>Inline Editing Using Custom Buttons</h2>
+
+<table id="fjqgrid">
+</table>
+<div id="pager">
+</div>
+<div style="margin-top: 10px;">
+    <input type="button" id="btnAdd" value="Add" class="btn">
+    <input type="button" id="btnEdit" value="Edit" class="btn">
+    <input type="button" id="btnSave" value="Save" class="btn">
+    <input type="button" id="btnRestore" value="Restore" class="btn">
+</div>
+@(Html.JqGrid(Model)
+    .Name("fjqgrid")
+    .Url("/inlineedit/usingcustombuttonsajaxpost")
+    .DataType("json")
+    .MType("GET")
+    .Columns(c =>
+                 {
+                     c.Bind(m => m.ProductID).Header("ID");
+                     c.Bind(m => m.Name).Header("Name").Editable(true);
+                     c.Bind(m => m.Size).Header("Size").Align(ColumnAlign.Center).Editable(true).EditRules(e => e.Integer(true));
+                     c.Bind(m => m.ProductCategoryID).Header("Category").Editable(true);
+                     c.Bind(m => m.ListPrice).Header("List Price").Align(ColumnAlign.Center).Editable(true);
+                 })
+    .Pager("pager")
+    .RowNum(10)
+    .ViewRecords(true)
+    .Width("900")
+    .Height("100%")
+    .Caption("Using Custom Buttons")
+    //.InlineEditing(i =>
+    //                    {
+    //                        i.AddRow("btnAdd", useFormatter: false);
+    //                        i.EditRow("btnEdit");
+    //                        i.SaveRow("btnSave", succesfunc:"successfn");
+    //                        //i.RestoreRow("btnRestore");
+    //                    })
+    .EditUrl("/inlineedit/usingcustombuttonsedited")
+    .Render()
+    )
+<div class="src-container">
+    @Html.Partial("_SrcSamples", ViewData["src"])
+</div>
+
+<script type="text/javascript">
+    function successfn(result) {
+        alert(result.responseText + "  " +1);
+        if (result.responseText == "") { alert("Update is missing!"); return false; }
+        return true;
+    }
+
+    jQuery("#btnEdit").click(function () {
+        jQuery("#fjqgrid").jqGrid('editRow', "4");
+    });
+    jQuery("#btnSave").click(function () {
+        jQuery("#fjqgrid").jqGrid('saveRow', "4", successfn);
+    });
+    
+    function keys() { return false; }
+    function oneditfunc() { return false; }
+    function aftersavefunc() { return false; }
+    function errorfunc() { return false; }
+    function afterrestorefunc() { return false;}
+    
+</script>
+

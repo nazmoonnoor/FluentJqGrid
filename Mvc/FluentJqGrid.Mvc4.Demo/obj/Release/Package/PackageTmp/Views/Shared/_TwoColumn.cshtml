@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "_AppLayout.cshtml";
+}
+@section scripts{
+    
+}
+<div id="sidebar">
+    @{ Html.RenderAction("SimpleVerticalMenu", "Home"); }
+</div>
+<div id="container">
+    <div style="margin: 10px;">
+        @RenderBody()
+    </div>
+</div>
+@RenderSection("scripts1", required: false)
+<script type="text/javascript">
+    $(function () {
+        //$('#container').css("min-height", $('#main').height());
+        SyntaxHighlighter.all();
+    });
+</script>
